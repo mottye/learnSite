@@ -63,6 +63,25 @@ mkdocs build
 
 これで `https://<ユーザー名>.github.io/learnSite/` でサイトが公開されます。手動で実行したい場合は Actions タブから「Deploy to GitHub Pages」ワークフローを **Run workflow** で実行できます。
 
+### 5. カスタムドメインを使う
+
+独自ドメイン（例: `https://blog.example.com`）で公開する場合:
+
+1. **`mkdocs.yml` の `site_url` をドメインに合わせる**
+   ```yaml
+   site_url: https://blog.example.com/
+   ```
+
+2. **GitHub でドメインを設定**
+   - リポジトリの **Settings** → **Pages** → **Custom domain**
+   - 使うドメインを入力（例: `blog.example.com`）して **Save**
+   - GitHub の案内に従い、DNS で **CNAME** または **A レコード** を設定する
+
+3. **HTTPS を有効にする**  
+   Custom domain 保存後、**Enforce HTTPS** にチェックを入れる（推奨）。
+
+これでサイトのリンク・OGP・サイトマップがすべてカスタムドメインで生成されます。
+
 ## ディレクトリ構成
 
 ```
