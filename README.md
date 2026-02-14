@@ -82,6 +82,24 @@ mkdocs build
 
 これでサイトのリンク・OGP・サイトマップがすべてカスタムドメインで生成されます。
 
+### 6. 表示されないとき（トラブルシューティング）
+
+1. **Actions の結果**  
+   **Actions** タブで直近の「Deploy to GitHub Pages」を開き、**build** と **deploy** の両方が成功（緑）か確認する。失敗している場合はそのステップのログでエラーを確認する。
+
+2. **GitHub の URL で開く**  
+   ブラウザで **https://mottye.github.io/learnSite/** を開く（リポジトリ名が `learnSite` の場合）。
+   - **ここで表示される** → デプロイは成功している。カスタムドメイン側（DNS・キャッシュ・Enforce HTTPS）を確認する。
+   - **ここでも表示されない** → デプロイかビルドに問題がある。上記の Actions ログを確認する。
+
+3. **Pages の設定**  
+   **Settings** → **Pages** で次を確認する。
+   - **Build and deployment** の **Source** が **GitHub Actions** になっている。
+   - **Custom domain** に `mottye.com` が入っている（使う場合）。保存後 **Enforce HTTPS** にチェックを入れる。
+
+4. **キャッシュ**  
+   ブラウザのシークレットウィンドウや別デバイスで https://mottye.com/ を開いてみる。
+
 ## ディレクトリ構成
 
 ```
