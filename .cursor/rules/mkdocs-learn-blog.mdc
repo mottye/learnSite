@@ -8,7 +8,7 @@ alwaysApply: false
 
 ## 記事の追加手順
 
-1. **ファイル**: `docs/blog/<スラッグ>.md` に Markdown を作成する。
+1. **ファイル**: `docs/blog/<スラッグ>.md` に Markdown を作成する。先頭に front matter で `description:`（160字以内、SEO・OGP用）を書く。
 2. **ナビ**: `mkdocs.yml` の `nav` → `ブログ` に `- 表示タイトル: blog/<スラッグ>.md` を追加する。
 3. **一覧**: 必要なら `docs/blog/index.md` の記事一覧テーブルに行を追加する。
 

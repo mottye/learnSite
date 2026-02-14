@@ -1,3 +1,7 @@
+---
+description: LearnSite の紹介。MkDocs + Material で作った学ぶブログの技術スタックと構成です。
+---
+
 # このサイトについて
 
 **LearnSite** は、MkDocs + Material テーマで作った「学ぶためのブログ」です。

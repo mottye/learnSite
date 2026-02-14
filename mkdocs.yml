@@ -4,7 +4,7 @@
 site_name: LearnSite
 site_description: 学ぶためのブログ — 実践知を「最短で使える形」で届けます
 site_url: https://mottye.com/
-site_author: Your Name
+site_author: mottye
 
 # 言語（日本語）
 theme:
@@ -79,7 +79,7 @@ markdown_extensions:
 
 # リポジトリ（GitHub など）
 repo_name: learnSite
-repo_url: https://github.com/your-username/learnSite
+repo_url: https://github.com/mottye/learnSite
 edit_uri: edit/main/docs/
 
 # 著作権
