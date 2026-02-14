@@ -1,0 +1,32 @@
+---
+description: MkDocs 学びブログの構成と記事追加のルール
+globs: docs/**/*.md,mkdocs.yml
+alwaysApply: false
+---
+
+# LearnSite MkDocs ルール
+
+## 記事の追加手順
+
+1. **ファイル**: `docs/blog/<スラッグ>.md` に Markdown を作成する。
+2. **ナビ**: `mkdocs.yml` の `nav` → `ブログ` に `- 表示タイトル: blog/<スラッグ>.md` を追加する。
+3. **一覧**: 必要なら `docs/blog/index.md` の記事一覧テーブルに行を追加する。
+
+```yaml
+# mkdocs.yml の nav 例
+- ブログ:
+    - 一覧: blog/index.md
+    - はじめに: blog/getting-started.md
+    - 新記事: blog/new-post.md
+```
+
+## コンテンツの約束
+
+- 本文は **日本語** で書く。
+- 見出しは `##` 以降で階層を揃える（`#` はページタイトルで使用済み）。
+- アドモニションは Material の記法を使う: `!!! tip "タイトル"` / `!!! note` / `!!! warning`。
+
+## 設定の変更
+
+- **サイトURL**: GitHub Pages 用に `mkdocs.yml` の `site_url` と `repo_url` をリポジトリに合わせる。
+- **ナビ順**: よく読まれる記事は `nav` の上の方に置く。

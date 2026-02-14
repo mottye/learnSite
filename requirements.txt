@@ -1,0 +1,4 @@
+# MkDocs and Material theme for learning blog
+mkdocs>=1.6.0
+mkdocs-material>=9.5.0
+mkdocs-minify-plugin>=0.8.0

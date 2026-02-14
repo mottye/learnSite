@@ -1,0 +1,86 @@
+# MkDocs 学ぶブログ - SmartScope 風セットアップ
+# https://www.mkdocs.org/user-guide/configuration/
+
+site_name: LearnSite
+site_description: 学ぶためのブログ — 実践知を「最短で使える形」で届けます
+site_url: https://your-username.github.io/learnSite/  # 公開時に変更
+site_author: Your Name
+
+# 言語（日本語）
+theme:
+  name: material
+  language: ja
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+# ナビゲーション（SmartScope 風：スタートガイド・ブログ・タグ）
+nav:
+  - ホーム: index.md
+  - スタートガイド: guides/index.md
+  - ブログ:
+      - 一覧: blog/index.md
+      - はじめに: blog/getting-started.md
+  - タグ: tags.md
+  - サイト情報:
+      - このサイトについて: about.md
+
+# プラグイン
+plugins:
+  - search:
+      lang: ja
+  - minify:
+      minify_html: true
+
+# マークダウン拡張
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+# リポジトリ（GitHub など）
+repo_name: learnSite
+repo_url: https://github.com/your-username/learnSite
+edit_uri: edit/main/docs/
+
+# 著作権
+copyright: Copyright &copy; 2025 LearnSite
