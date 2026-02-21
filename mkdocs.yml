@@ -32,20 +32,30 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.footer    # 前のページ・次のページ
+    - navigation.path      # パンくずリスト
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.copy
+    - content.action.edit  # このページを編集
   icon:
     repo: fontawesome/brands/github
 
 # ナビゲーション（SmartScope 風：スタートガイド・ブログ・タグ）
 nav:
   - ホーム: index.md
-  - スタートガイド: guides/index.md
+  - スタートガイド:
+      - はじめに: guides/index.md
+      - MkDocs の機能: guides/mkdocs-features.md
   - ブログ:
       - 一覧: blog/index.md
       - はじめに: blog/getting-started.md
+      - Cursor:
+          - 一覧: blog/cursor/index.md
+          - Cursor とは: blog/cursor/overview.md
+      - RAG:
+          - GraphRAG とは: blog/rag/graphrag.md
   - タグ: tags.md
   - サイト情報:
       - このサイトについて: about.md
@@ -54,6 +64,7 @@ nav:
 plugins:
   - search:
       lang: ja
+  - tags: {}               # ページに tags を付けて一覧・フィルタ（front matter で tags: [a, b]）
   - minify:
       minify_html: true
 
@@ -76,6 +87,19 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.emoji:        # :smile: など
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys          # ++ctrl+c++ キー表記
+  - pymdownx.tasklist:     # - [ ] / - [x] チェックリスト
+      custom_checkbox: true
+
+# フッターの SNS リンク
+extra:
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/mottye0911
+      name: mottye on X
 
 # リポジトリ（GitHub など）
 repo_name: learnSite
